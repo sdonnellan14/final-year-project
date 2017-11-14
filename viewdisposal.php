@@ -58,10 +58,10 @@ if (mysqli_connect_errno())
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$result = mysqli_query($con,"SELECT * FROM MART");
+$result = mysqli_query($con,"SELECT * FROM DISPOSAL");
 
 echo "<table class='table'>
-<caption>Registered Marts</caption>
+<caption>Registered Disposal Companies</caption>
 <tr>
 <th>ID</th>
 <th>Name</th>
@@ -69,19 +69,35 @@ echo "<table class='table'>
 <th>County</th>
 <th>Address</th>
 <th>Contact</th>
+<th>Email</th>
+<th>ZeroThreeMonths</th>
+<th>ThreeSixMonths</th>
+<th>SixTwelveMonths</th>
+<th>TwelveTwentyFourMonths</th>
+<th>TwentyFourFortyEightMonths</th>
+<th>FortyEightMonths</th>
+<th>Sheep</th>
 
 </tr>";
 
 while($row = mysqli_fetch_array($result))
 {
 echo "<tr>";
-echo "<td>" . $row['MartId'] . "</td>";
-echo "<td>" . $row['MartName'] . "</td>";
-echo "<td>" . $row['MartProvince'] . "</td>";
-echo "<td>" . $row['MartCounty'] . "</td>";
-echo "<td>" . $row['MartAddress'] . "</td>";
-echo "<td>" . $row['MartContact'] . "</td>";
-echo "<td><a href='viewmartreports.php'>View Mart Reports</a></td>";
+echo "<td>" . $row['DisposalId'] . "</td>";
+echo "<td>" . $row['DisposalName'] . "</td>";
+echo "<td>" . $row['DisposalProvince'] . "</td>";
+echo "<td>" . $row['DisposalCounty'] . "</td>";
+echo "<td>" . $row['DisposalAddress'] . "</td>";
+echo "<td>" . $row['DisposalContact'] . "</td>";
+echo "<td>" . $row['DisposalEmail'] . "</td>";
+echo "<td>" . $row['ZeroThreeMonths'] . "</td>";
+echo "<td>" . $row['ThreeSixMonths'] . "</td>";
+echo "<td>" . $row['SixTwelveMonths'] . "</td>";
+echo "<td>" . $row['TwelveTwentyFourMonths'] . "</td>";
+echo "<td>" . $row['TwentyFourFortyEightMonths'] . "</td>";
+echo "<td>" . $row['FortyEightMonths'] . "</td>";
+echo "<td>" . $row['Sheep'] . "</td>";
+
 echo "</tr>";
 }
 echo "</table>";

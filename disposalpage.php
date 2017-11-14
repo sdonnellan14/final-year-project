@@ -47,47 +47,11 @@
         </div>
       </div>
     </nav>
+    <a href="viewdisposal.php" class="btn btn-primary btn-block" role="button">View Disposal Companies</a>
+    <a href="adddisposal.php" class="btn btn-primary btn-block" role="button">Register Company</a>
     
-    <!-- php connection and insert statements syntax developed using a number of different online tutorials: https://stackoverflow.com/questions/16835753/inserting-data-to-table-mysqli-insert,https://stackoverflow.com/questions/34329852/how-to-insert-date-values-into-table,https://community.c9.io/t/connecting-php-to-mysql/1606    -->
+
+</body>
     
-    <?php
-$con=mysqli_connect("127.0.0.1","sdonnellan","","AGRI1",3306);
-// Check connection
-if (mysqli_connect_errno())
-{
-echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-
-$result = mysqli_query($con,"SELECT * FROM MART");
-
-echo "<table class='table'>
-<caption>Registered Marts</caption>
-<tr>
-<th>ID</th>
-<th>Name</th>
-<th>Province</th>
-<th>County</th>
-<th>Address</th>
-<th>Contact</th>
-
-</tr>";
-
-while($row = mysqli_fetch_array($result))
-{
-echo "<tr>";
-echo "<td>" . $row['MartId'] . "</td>";
-echo "<td>" . $row['MartName'] . "</td>";
-echo "<td>" . $row['MartProvince'] . "</td>";
-echo "<td>" . $row['MartCounty'] . "</td>";
-echo "<td>" . $row['MartAddress'] . "</td>";
-echo "<td>" . $row['MartContact'] . "</td>";
-echo "<td><a href='viewmartreports.php'>View Mart Reports</a></td>";
-echo "</tr>";
-}
-echo "</table>";
-
-mysqli_close($con);
-?>
-    </body>
+ </html>   
     
-</html>

@@ -17,7 +17,7 @@
     <link href="css/small-business.css" rel="stylesheet">
 
   </head>
-
+  
   <body>
 
     <!-- Navigation -->
@@ -29,8 +29,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.php">Home
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -41,53 +41,23 @@
               <a class="nav-link" href="#">Register</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+              <a class="nav-link" href="logintype.php">Login</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     
-    <!-- php connection and insert statements syntax developed using a number of different online tutorials: https://stackoverflow.com/questions/16835753/inserting-data-to-table-mysqli-insert,https://stackoverflow.com/questions/34329852/how-to-insert-date-values-into-table,https://community.c9.io/t/connecting-php-to-mysql/1606    -->
-    
-    <?php
-$con=mysqli_connect("127.0.0.1","sdonnellan","","AGRI1",3306);
-// Check connection
-if (mysqli_connect_errno())
-{
-echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-
-$result = mysqli_query($con,"SELECT * FROM MART");
-
-echo "<table class='table'>
-<caption>Registered Marts</caption>
-<tr>
-<th>ID</th>
-<th>Name</th>
-<th>Province</th>
-<th>County</th>
-<th>Address</th>
-<th>Contact</th>
-
-</tr>";
-
-while($row = mysqli_fetch_array($result))
-{
-echo "<tr>";
-echo "<td>" . $row['MartId'] . "</td>";
-echo "<td>" . $row['MartName'] . "</td>";
-echo "<td>" . $row['MartProvince'] . "</td>";
-echo "<td>" . $row['MartCounty'] . "</td>";
-echo "<td>" . $row['MartAddress'] . "</td>";
-echo "<td>" . $row['MartContact'] . "</td>";
-echo "<td><a href='viewmartreports.php'>View Mart Reports</a></td>";
-echo "</tr>";
-}
-echo "</table>";
-
-mysqli_close($con);
-?>
-    </body>
-    
-</html>
+   <div class="wrapper">
+    <form class="form-signin">       
+      <h2 class="form-signin-heading">Login</h2>
+      <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+      <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+      </label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+    </form>
+  </div>
+  
+  </body>

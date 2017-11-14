@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +42,7 @@
               <a class="nav-link" href="#">Register</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+              <a class="nav-link" href="logintype.php">Login</a>
             </li>
           </ul>
         </div>
@@ -106,7 +107,7 @@
               <p class="card-text">Combat the huge price disparity in animal disposal services throughout the country by consulting the latest prices</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">More Info</a>
+              <a href="disposalpage.php" class="btn btn-primary">More Info</a>
             </div>
           </div>
         </div>
