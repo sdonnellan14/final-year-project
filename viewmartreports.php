@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,10 +41,10 @@
               <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Register</a>
+              <a class="nav-link" href="/startbootstrap-sb-admin-2-gh-pages/pages/index.html">Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+              <a class="nav-link" href="#"><?php echo $_SESSION["martEmail"] ?></a>
             </li>
           </ul>
         </div>
@@ -58,7 +61,7 @@ if (mysqli_connect_errno())
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$result = mysqli_query($con,"SELECT * FROM SALEREPORT");
+$result = mysqli_query($con,"SELECT SALEREPORT.ReportId, SALEREPORT.MartId, SALEREPORT.ReportDate, SALEREPORT.SaleDetails FROM SALEREPORT, MART WHERE MART.MartEmail = '$_SESSION[martEmail]' ");
 
 
 echo "<table class='table'>

@@ -1,5 +1,18 @@
+<?php
+
+//Session variables created with the assistance of:
+// - https://stackoverflow.com/questions/22486793/warning-mysqli-fetch-array-expects-parameter-1-to-be-mysqli-result-boolean-g
+// - https://stackoverflow.com/questions/9023470/using-a-session-variable-in-a-sql-where-statement
+// - https://stackoverflow.com/questions/10097887/using-sessions-session-variables-in-a-php-login-script
+// - https://www.w3schools.com/php/php_sessions.asp
+
+
+include("loginservdisposal.php"); // Include loginserv for checking username and password
+?>
 <!DOCTYPE html>
 <html lang="en">
+
+  <!-- php login setup aided by following tutorials: http://www.softaox.info/how-to-create-a-simple-login-form-in-php-mysqli-tutorial/, http://kelvline.nivlec.com/php-mysqli-login-registration-tutorial/ , http://www.allphptricks.com/simple-user-registration-login-script-in-php-and-mysqli/ -->
 
   <head>
 
@@ -15,6 +28,41 @@
 
     <!-- Custom styles for this template -->
     <link href="css/small-business.css" rel="stylesheet">
+    
+    <title>Login</title>
+
+
+<style>
+.login{
+width:360px;
+margin:50px auto;
+font:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+border-radius:10px;
+border:2px solid #ccc;
+padding:10px 40px 25px;
+margin-top:70px; 
+}
+input[type=text], input[type=password]{
+width:99%;
+padding:10px;
+margin-top:8px;
+border:1px solid #ccc;
+padding-left:5px;
+font-size:16px;
+font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif; 
+}
+input[type=submit]{
+width:100%;
+background-color:#009;
+color:#fff;
+border:2px solid #06F;
+padding:10px;
+font-size:20px;
+cursor:pointer;
+border-radius:5px;
+margin-bottom:15px; 
+}
+</style>
 
   </head>
   
@@ -48,16 +96,14 @@
       </div>
     </nav>
     
-   <div class="wrapper">
-    <form class="form-signin">       
-      <h2 class="form-signin-heading">Login</h2>
-      <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
-      <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
-      <label class="checkbox">
-        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
-      </label>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
-    </form>
-  </div>
+ <div class="login">
+<h1 align="center">Login</h1>
+<form action="" method="post" style="text-align:center;">
+<input type="text" placeholder="Email" id="DisposalEmail" name="DisposalEmail"><br/><br/>
+<input type="password" placeholder="Password" id="DisposalPassword" name="DisposalPassword"><br/><br/>
+<input type="submit" value="Login" name="submit">
+<!-- Error Message -->
+<span><?php echo $error; ?></span>
   
   </body>
+</html>

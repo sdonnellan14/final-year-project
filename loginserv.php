@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $error=''; //Variable to Store error message;
 if(isset($_POST['submit'])){
  if(empty($_POST['MartEmail']) || empty($_POST['MartPassword'])){
@@ -7,6 +10,7 @@ if(isset($_POST['submit'])){
  else
  {
  //Define $user and $pass
+ $_SESSION["martEmail"] = $_POST['MartEmail'];
  $user=$_POST['MartEmail'];
  $pass=$_POST['MartPassword'];
  //Establishing Connection with server by passing server_name, user_id and pass as a parameter
@@ -16,11 +20,11 @@ if(isset($_POST['submit'])){
  
  $rows = mysqli_num_rows($query);
  if($rows == 1){
- header("Location: index.php"); // Redirecting to other page
+ header("Location: martpage.php"); // Redirecting to other page
  }
  else
  {
- $error = "Username of Password is Invalid";
+ $error = "Username or Password is Invalid";
  }
  mysqli_close($conn); // Closing connection
  }

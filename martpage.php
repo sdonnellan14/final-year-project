@@ -1,3 +1,13 @@
+<?php 
+
+//Session variables created with the assistance of:
+// - https://stackoverflow.com/questions/22486793/warning-mysqli-fetch-array-expects-parameter-1-to-be-mysqli-result-boolean-g
+// - https://stackoverflow.com/questions/9023470/using-a-session-variable-in-a-sql-where-statement
+// - https://stackoverflow.com/questions/10097887/using-sessions-session-variables-in-a-php-login-script
+// - https://www.w3schools.com/php/php_sessions.asp
+
+  session_start();
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,10 +48,10 @@
               <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Register</a>
+              <a class="nav-link" href="/startbootstrap-sb-admin-2-gh-pages/pages/index.html">Admin Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+              <a class="nav-link" href="#"> <?php echo $_SESSION["martEmail"] ?> </a>
             </li>
           </ul>
         </div>
@@ -51,6 +61,7 @@
     <a href="addmart.php" class="btn btn-primary btn-block" role="button">Add Mart</a>
     <a href="viewmartreports.php" class="btn btn-primary btn-block" role="button">View Mart Reports</a>
     <a href="addmartreport.php" class="btn btn-primary btn-block" role="button">Add Mart Report</a>
+
 
 </body>
     

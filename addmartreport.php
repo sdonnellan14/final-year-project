@@ -41,7 +41,7 @@
               <a class="nav-link" href="#">Register</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+              <a class="nav-link" href="#"><?php echo $_SESSION["martEmail"] ?></a>
             </li>
           </ul>
         </div>
@@ -56,7 +56,7 @@
     <div class="form-group">
       <label for="inputMartId" class="col-lg-2 control-label">Mart ID</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputMartId" name="MartId" placeholder="Mart ID">
+        <input type="text" class="form-control" id="inputMartId" name="MartId" value= "<?php echo $_SESSION["martEmail"]; ?>" >
       </div>
     </div>
     
