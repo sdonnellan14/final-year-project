@@ -1,4 +1,12 @@
 <?php
+
+//Session variables created with the assistance of:
+// - https://stackoverflow.com/questions/22486793/warning-mysqli-fetch-array-expects-parameter-1-to-be-mysqli-result-boolean-g
+// - https://stackoverflow.com/questions/9023470/using-a-session-variable-in-a-sql-where-statement
+// - https://stackoverflow.com/questions/10097887/using-sessions-session-variables-in-a-php-login-script
+// - https://www.w3schools.com/php/php_sessions.asp
+
+
 include("loginserv.php"); // Include loginserv for checking username and password
 ?>
 <!DOCTYPE html>

@@ -1,7 +1,15 @@
+<?php 
+
+//Session variables created with the assistance of:
+// - https://stackoverflow.com/questions/22486793/warning-mysqli-fetch-array-expects-parameter-1-to-be-mysqli-result-boolean-g
+// - https://stackoverflow.com/questions/9023470/using-a-session-variable-in-a-sql-where-statement
+// - https://stackoverflow.com/questions/10097887/using-sessions-session-variables-in-a-php-login-script
+// - https://www.w3schools.com/php/php_sessions.asp
+
+  session_start();
+  ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- php login setup aided by following tutorials: http://www.softaox.info/how-to-create-a-simple-login-form-in-php-mysqli-tutorial/, http://kelvline.nivlec.com/php-mysqli-login-registration-tutorial/ , http://www.allphptricks.com/simple-user-registration-login-script-in-php-and-mysqli/ -->
 
   <head>
 
@@ -31,8 +39,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -40,21 +48,19 @@
               <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Register</a>
+              <a class="nav-link" href="reportcharts.php">Admin Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+              <a class="nav-link" href="#"> <?php echo $_SESSION["martEmail"] ?> </a>
             </li>
           </ul>
-        </div>
+        </div> 
       </div>
     </nav>
-    
-    <a href="loginmart.php" class="btn btn-primary btn-block" role="button">Mart</a>
-    <a href="logindisposal.php" class="btn btn-primary btn-block" role="button">Animal Disposal Company</a>
-     <a href="#" class="btn btn-sq-lg btn-primary" style="width:300px; height:300px; margin-left:150px;">
-                <i class="fa fa-user fa-5x"></i><br/>
-                Demo Primary <br>Button
-            </a>
-    
+    <a href="pfindmarts.php" class="btn btn-primary btn-block" role="button">Find Marts</a>
+    <a href="ppricecompare.php" class="btn btn-primary btn-block" role="button">Price Page</a>
+
+
 </body>
+    
+ </html>  

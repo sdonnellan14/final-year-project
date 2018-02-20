@@ -48,7 +48,7 @@
               <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/startbootstrap-sb-admin-2-gh-pages/pages/index.html">Admin Dashboard</a>
+              <a class="nav-link" href="reportcharts.php">Admin Dashboard</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"> <?php echo $_SESSION["martEmail"] ?> </a>

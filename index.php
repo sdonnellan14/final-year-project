@@ -83,22 +83,11 @@
               <p class="card-text">We provide a minimalist, easy to use platform upon which farmers and cattle dealers can search and read the most recent sales reports from around the country</p>
             </div>
             <div class="card-footer">
-              <a href="martpage.php" class="btn btn-primary">Search Mart Reports</a>
+              <a href="pmartpage.php" class="btn btn-primary">Explore Marts</a>
             </div>
           </div>
         </div>
-        <!-- /.col-md-4 -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h2 class="card-title">Beef Factory Prices</h2>
-              <p class="card-text">View the most up to date prices being offered by factories throughout the country and get the best price for your stock</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">View Latest Prices</a>
-            </div>
-          </div>
-        </div>
+    
         <!-- /.col-md-4 -->
         <div class="col-md-4 mb-4">
           <div class="card h-100">

@@ -72,6 +72,7 @@ echo "<table class='table'>
 
 </tr>";
 
+//Fetching mart records from SQLI MART table
 while($row = mysqli_fetch_array($result))
 {
 echo "<tr>";

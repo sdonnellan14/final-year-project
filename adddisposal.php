@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Small Business - Start Bootstrap Template</title>
+    <title>Top Navbar</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@
     </nav>
     
     
-     <!-- Input form with fields corresponding to SQLI DB Columns (Table = MART  -->
+     <!-- Input form with fields corresponding to SQLI DB Columns (Table = MART) https://bootswatch.com/cyborg/#forms  -->
     <form class="form-horizontal" action="insertdisposal.php" method="post">
   <fieldset>
     <legend>Register New Animal Disposal Company</legend>

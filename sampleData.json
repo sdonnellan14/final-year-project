@@ -1,0 +1,13 @@
+{
+  "cols": [
+        {"id":"","label":"Type","pattern":"","type":"string"},
+        {"id":"","label":"Max Values","pattern":"","type":"number"}
+      ],
+  "rows": [
+        {"c":[{"v":"Heifers","f":null},{"v":500,"f":null}]},
+        {"c":[{"v":"Cows","f":null},{"v":600,"f":null}]},
+        {"c":[{"v":"Calves","f":null},{"v":350,"f":null}]},
+        {"c":[{"v":"Bulls","f":null},{"v":1650,"f":null}]},
+        {"c":[{"v":"Weanling Heifers","f":null},{"v":480,"f":null}]}
+      ]
+}

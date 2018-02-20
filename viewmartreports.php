@@ -61,7 +61,7 @@ if (mysqli_connect_errno())
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$result = mysqli_query($con,"SELECT SALEREPORT.ReportId, SALEREPORT.MartId, SALEREPORT.ReportDate, SALEREPORT.SaleDetails FROM SALEREPORT, MART WHERE MART.MartEmail = '$_SESSION[martEmail]' ");
+$result = mysqli_query($con,"SELECT SALEREPORT.ReportId, SALEREPORT.MartId, SALEREPORT.ReportDate, SALEREPORT.SaleDetails FROM SALEREPORT WHERE SALEREPORT.MartId = '$_SESSION[martEmail]' ");
 
 
 echo "<table class='table'>
@@ -74,6 +74,7 @@ echo "<table class='table'>
 
 </tr>";
 
+//Fetching records from SQLI SALEREPORT table
 while($row = mysqli_fetch_array($result)) 
 
 {
@@ -82,6 +83,7 @@ echo "<td>" . $row['ReportId'] . "</td>";
 echo "<td>" . $row['MartId'] . "</td>";
 echo "<td>" . $row['ReportDate'] . "</td>";
 echo "<td>" . $row['SaleDetails'] . "</td>";
+echo "<td>" . $row['MartEmail'] . "</td>";
 echo "</tr>";
 }
 echo "</table>";
@@ -89,3 +91,4 @@ echo "</table>";
 mysqli_close($con);
 ?>
     </body>
+</html>
